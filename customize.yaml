@@ -1,0 +1,92 @@
+#####Customize Lights#####
+  light.LR1:
+    friendly_name: Living Room RGB
+  
+  light.DR1:
+    friendly_name: Dining Room Overhead 1
+  
+  light.DR2:  
+    friendly_name: Dining Room Overhead 2
+  
+  light.OffL1:
+    friendly_name: Office Overhead 1
+  
+  light.OffL2:
+    friendly_name: Office Overhead 2
+  
+  light.Kit1:
+    friendly_name: Kitchen Overhead 1
+  
+  light.Kit2:
+    friendly_name: Kitchen Overhead 2
+    
+
+#####Customize Scenes#####
+  scene.bedtime:
+    icon: mdi:hotel
+    
+#####Customize Switches#####
+  switch.Amp:
+    icon: mdi:amplifier
+    friendly_name: Guitar Amp
+  switch.Lexi_Desktop:
+    icon: mdi:desktop-tower
+    friendly_name: Desktop Outlet
+  switch.Bedroom_Fan:
+    icon: mdi:fan
+  switch.Office_Fan:
+    icon: mdi:fan
+  switch.3D_Printer:
+    icon: mdi:printer-3d
+    
+#####Customize Groups#####
+#  group.lexi_phone:
+#    friendly_name: Lexi's Phone
+#    emulated_hue: false
+#  group.nathan_phone:
+#    friendly_name: Nathan's Phone
+#    emulated_hue: false
+
+#####Customize Devices#####
+#  device_tracker.hejman08_nathan_phone:
+#    friendly_name: Nathan's S7 Edge
+#    icon: mdi:emoticon-poop
+
+#  device_tracker.lexi13marie_lexi_phone:
+#    friendly_name: Lexi's S6 Edge+
+#    icon: mdi:owl
+    
+#  sensor.lexi_phone_battery:
+#    friendly_name: Battery
+#    icon: mdi:battery
+
+#  sensor.nathan_phone_battery:
+#    friendly_name: Battery
+#    icon: mdi:battery
+    
+    
+#####Customize Scripts#####
+  script.nh_phone_ringer: 
+    friendly_name: Set Ringer to 100%
+    icon: mdi:volume-high
+  script.nh_lost_phone: 
+    friendly_name: Call Phone from IFTTT
+    icon: mdi:phone
+  script.nh_phone_vibrate:
+    friendly_name: Set Phone to Vibrate
+    icon: mdi:volume-off
+    
+  script.lh_phone_ringer: 
+    friendly_name: Set Ringer to 100%
+    icon: mdi:volume-high
+  script.lh_lost_phone: 
+    friendly_name: Call Phone from IFTTT
+    icon: mdi:phone
+    
+  script.lh_phone_vibrate: 
+    friendly_name: Set Phone to Vibrate
+    icon: mdi:volume-off
+    
+#####Hide Yo Kids, Hide Yo Wife, Hide Yo Husband cause we be takin' up too much space up in here#####
+#  scene.Blue:
+#    hidden: true
