@@ -1,0 +1,35 @@
+office_fan_on:
+  sequence:
+    - service: shell_command.office_fan_on
+    - service: shell_command.office_fan_on
+    - service: shell_command.office_fan_on
+    - service: shell_command.office_fan_on
+    - service: shell_command.office_fan_on
+    - service: shell_command.office_fan_on
+
+office_fan_off:
+  sequence:
+    - service: shell_command.office_fan_off
+    - service: shell_command.office_fan_off
+    - service: shell_command.office_fan_off
+    - service: shell_command.office_fan_off
+    - service: shell_command.office_fan_off
+    - service: shell_command.office_fan_off
+    
+bedroom_fan_on:
+  sequence:
+    - service: shell_command.bedroom_fan_on
+    - service: shell_command.bedroom_fan_on
+    - service: shell_command.bedroom_fan_on
+    - service: shell_command.bedroom_fan_on
+    - service: shell_command.bedroom_fan_on
+    - service: shell_command.bedroom_fan_on
+
+bedroom_fan_off:
+  sequence:
+    - service: shell_command.bedroom_fan_off
+    - service: shell_command.bedroom_fan_off
+    - service: shell_command.bedroom_fan_off
+    - service: shell_command.bedroom_fan_off
+    - service: shell_command.bedroom_fan_off
+    - service: shell_command.bedroom_fan_off

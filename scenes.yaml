@@ -1,0 +1,27 @@
+- name: Bedtime
+  entities:
+    light.dr1: off
+    light.dr2: off
+    light.lr1: off
+    light.kit1: off
+    light.kit2: off
+    light.lexi_nightstand_: on
+    light.nathan_nightstand_: on
+    switch.office_fan: off
+    switch.amp: off
+    switch.bedroom_fan: on
+- name: Morning
+  entities:
+    light.dr1: 
+      state: on 
+      transition: 5
+    light.dr2:
+      state: on 
+      transition: 5
+    light.offl1:
+      state: on 
+      transition: 5
+    light.offl2:
+      state: on
+      transition: 5
+    switch.bedroom_fan: off  

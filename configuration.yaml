@@ -1,0 +1,92 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 194
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  customize: !include customize.yaml  
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret api_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+
+# Text to speech
+tts:
+  platform: google
+
+
+###Fuck you emulated_hue. Fuck you so much. 
+#emulated_hue:
+#  type: google_home
+#  listen_port: 80
+#  host_ip: 192.168.1.20
+  
+######Switches######
+switch:
+  platform: rpi_rf
+  gpio: 17
+  switches:
+    Bedroom Fan:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+    Lexi Desktop:
+      pulselength: 191
+      protocol: 1
+      code_on: 1070531
+      code_off: 1070540
+    Amp:
+      pulselength: 191
+      protocol: 1
+      code_on: 1070851
+      code_off: 1070860
+    3D Printer:
+      pulselength: 191
+      protocol: 1
+      code_on: 1072387
+      code_off: 1072396
+    Office Fan:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+#slowly but surely making all the switches be dummies so I can have a script send multiple code_on/code_off in quick succession as sending only one tends to work only sometimes.
+#so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.  
+
+###Includes###      
+script: !include script.yaml
+automation: !include automation.yaml
+group: !include groups.yaml
+scene: !include scenes.yaml
+shell_command: !include shell.yaml

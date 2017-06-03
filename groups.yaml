@@ -1,0 +1,86 @@
+default_view:
+  view: yes
+  entities:
+    - group.office
+    - group.bedroom
+    - group.switches
+    - group.living_room
+    - group.kitchen
+    - group.dining_room
+    - group.phones
+  
+light_groups:
+    - group.office
+    - group.bedroom
+    - group.living_room
+    - group.kitchen
+    - group.dining_room
+    - group.living_area
+
+switches:
+  name: Switches
+  entities:
+    - switch.Bedroom_Fan
+    - switch.Lexi_Desktop
+    - switch.Amp
+    - switch.Office_Fan
+    - switch.3D_Printer
+
+
+ 
+Bedroom:
+    - light.lexi_nightstand_
+    - light.nathan_nightstand_
+
+Living Room:
+    - light.LR1
+
+Office:
+    - light.OffL1
+    - light.Offl2
+
+Kitchen:
+    - light.Kit1
+    - light.Kit2
+
+Dining Room:
+    - light.Dr1
+    - light.Dr2
+
+Master Switch:
+    - light.Kit1
+    - light.Kit2
+    - light.Dr1
+    - light.Dr2
+    - light.LR1
+    - light.OffL1
+    - light.Offl2
+    - light.lexi_nightstand_
+    - light.nathan_nightstand_
+    - switch.bedroom_fan
+    - switch.office_fan
+    - switch.3D_Printer
+    - switch.Amp
+Living Area:
+    - light.LR1
+    - light.Dr1
+    - light.Dr2
+
+Office Fan:
+    - script.office_fan_on
+    - script.office_fan_off
+    
+Bedroom Fan:
+    - script.office_fan_on
+    - script.office_fan_off
+    
+ 
+    
+Scenes Control:
+    - scene.bedtime
+    - scene.morning
+Scenes:
+  view: yes
+  entities:
+    - group.scenes_control
+
