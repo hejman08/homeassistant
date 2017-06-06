@@ -26,8 +26,10 @@ switches:
     - switch.Office_Fan
     - switch.3D_Printer
 
-
- 
+Nathan_Phone:
+  entities:
+    - device_tracker.hejman08_nathan_phone
+    - sensor.nathans_phone_battery
 Bedroom:
     - light.lexi_nightstand_
     - light.nathan_nightstand_
@@ -75,4 +77,9 @@ Scenes:
   view: yes
   entities:
     - group.scenes_control
+    
+Phones:
+  view: yes
+  entities:
+    - group.nathan_phone
 

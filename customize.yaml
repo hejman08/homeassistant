@@ -41,14 +41,14 @@
 #  group.lexi_phone:
 #    friendly_name: Lexi's Phone
 #    emulated_hue: false
-#  group.nathan_phone:
-#    friendly_name: Nathan's Phone
-#    emulated_hue: false
+  group.nathan_phone:
+    friendly_name: Nathan's Phone
+    emulated_hue: false
 
 #####Customize Devices#####
-#  device_tracker.hejman08_nathan_phone:
-#    friendly_name: Nathan's S7 Edge
-#    icon: mdi:emoticon-poop
+  device_tracker.hejman08_nathan_phone:
+    friendly_name: Phone Locaton
+    icon: mdi:emoticon-poop
 
 #  device_tracker.lexi13marie_lexi_phone:
 #    friendly_name: Lexi's S6 Edge+
@@ -58,9 +58,9 @@
 #    friendly_name: Battery
 #    icon: mdi:battery
 
-#  sensor.nathan_phone_battery:
-#    friendly_name: Battery
-#    icon: mdi:battery
+  sensor.nathans_phone_battery:
+    friendly_name: Battery
+    icon: mdi:battery
     
     
 #####Customize Scripts#####

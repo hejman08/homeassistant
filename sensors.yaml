@@ -1,0 +1,5 @@
+platform: mqtt
+state_topic: "owntracks/hejman08/nathan_phone"
+name: "Nathan's Phone Battery"
+unit_of_measurement: "%"
+value_template: "{{ value_json.batt }}"

@@ -50,8 +50,17 @@ light:
 tts:
   platform: google
 
+#MQTT for device tracker
+mqtt:
+  broker: 192.168.1.20
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_user
+  password: !secret mqtt_password
 
-###Fuck you emulated_hue. Fuck you so much. 
+device_tracker:
+  platform: owntracks
+
 emulated_hue:
   type: google_home
   listen_port: 80
@@ -93,7 +102,9 @@ switch:
       code_on: 0
       code_off: 0
 #slowly but surely making all the switches be dummies so I can have a script send multiple code_on/code_off in quick succession as sending only one tends to work only sometimes.
-#so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.  
+#so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.
+#Following the chain: Switch is clicked or triggered by Google Home > Automation triggers based on that > Automation fires script > Script fires shell command to 
+#send signal like 9 times in quick succession.  
 
 ###Includes###      
 script: !include script.yaml
@@ -101,3 +112,4 @@ automation: !include automations.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 shell_command: !include shell.yaml
+sensor: !include sensors.yaml
