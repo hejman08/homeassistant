@@ -2,7 +2,7 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
- latitude: !secret latitude
+  latitude: !secret latitude
   longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 194
@@ -21,20 +21,15 @@ config:
 http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret api_password
+  server_port: 8123
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
 # Checks for available updates
 updater:
 
-#Hue
-light:
-  platform: hue
-  host: 192.168.1.22
-
-
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -45,17 +40,27 @@ history:
 # View all events in a logbook
 logbook:
 
-
+#Hue
+light:
+  platform: hue
+  host: 192.168.1.22
+  
+  
 # Text to speech
 tts:
   platform: google
 
 
 ###Fuck you emulated_hue. Fuck you so much. 
-#emulated_hue:
-#  type: google_home
-#  listen_port: 80
-#  host_ip: 192.168.1.20
+emulated_hue:
+  type: google_home
+  listen_port: 80
+  host_ip: 192.168.1.20
+  expose_by_default: false
+  exposed_domains:
+    - group
+    - switch
+    - scene
   
 ######Switches######
 switch:
@@ -92,7 +97,7 @@ switch:
 
 ###Includes###      
 script: !include script.yaml
-automation: !include automation.yaml
+automation: !include automations.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 shell_command: !include shell.yaml

@@ -21,9 +21,7 @@
     friendly_name: Kitchen Overhead 2
     
 
-#####Customize Scenes#####
-  scene.bedtime:
-    icon: mdi:hotel
+
     
 #####Customize Switches#####
   switch.Amp:
@@ -87,6 +85,21 @@
     friendly_name: Set Phone to Vibrate
     icon: mdi:volume-off
     
-#####Hide Yo Kids, Hide Yo Wife, Hide Yo Husband cause we be takin' up too much space up in here#####
-#  scene.Blue:
-#    hidden: true
+###Emulated Hue releases here
+  group.bedroom:
+    emulated_hue: true
+  switch.bedroom_fan:
+    emulated_hue: true
+  group.kitchen:
+    emulated_hue: true
+  group.dining_room:
+    emulated_hue: true
+  group.living_room:
+    emulated_hue: true 
+  group.office:
+    emulated_hue: true
+  switch.office_fan:
+    emulated_hue: true
+  scene.bedtime:
+    emulated_hue: true
+    icon: mdi:hotel

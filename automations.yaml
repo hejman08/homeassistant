@@ -1,1 +1,48 @@
-[]
+- action:
+  - alias: Office_Fan_On
+    data:
+      entity_id: script.office_fan_on
+    service: script.turn_on
+  alias: Office Fan On
+  id: '1496540509506'
+  trigger:
+  - entity_id: switch.office_fan
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: office_fan_off
+    data:
+      entity_id: script.office_fan_off
+    service: script.turn_on
+  alias: Office Fan Off
+  id: '1496541544214'
+  trigger:
+  - entity_id: switch.office_fan
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - alias: bedroom_Fan_On
+    data:
+      entity_id: script.bedroom_fan_on
+    service: script.turn_on
+  alias: Bedroom Fan On
+  id: '1496547509506'
+  trigger:
+  - entity_id: switch.bedroom_fan
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: bedroom_fan_off
+    data:
+      entity_id: script.bedroom_fan_off
+    service: script.turn_on
+  alias: Bedroom Fan Off
+  id: '1496549544214'
+  trigger:
+  - entity_id: switch.bedroom_fan
+    from: 'on'
+    platform: state
+    to: 'off'

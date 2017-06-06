@@ -66,15 +66,7 @@ Living Area:
     - light.Dr1
     - light.Dr2
 
-Office Fan:
-    - script.office_fan_on
-    - script.office_fan_off
-    
-Bedroom Fan:
-    - script.office_fan_on
-    - script.office_fan_off
-    
- 
+
     
 Scenes Control:
     - scene.bedtime
