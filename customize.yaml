@@ -50,19 +50,17 @@
     friendly_name: Phone Locaton
     icon: mdi:emoticon-poop
 
-#  device_tracker.lexi13marie_lexi_phone:
-#    friendly_name: Lexi's S6 Edge+
-#    icon: mdi:owl
-    
-#  sensor.lexi_phone_battery:
-#    friendly_name: Battery
-#    icon: mdi:battery
-
   sensor.nathans_phone_battery:
     friendly_name: Battery
     icon: mdi:battery
     
+  sensor.nathans_phone_latitude:
+    friendly_name: Latitude
+    icon: mdi:earth
     
+  sensor.nathans_phone_longitude:
+    friendly_name: Longitude
+    icon: mdi:earth
 #####Customize Scripts#####
   script.nh_phone_ringer: 
     friendly_name: Set Ringer to 100%

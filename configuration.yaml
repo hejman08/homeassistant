@@ -112,4 +112,4 @@ automation: !include automations.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 shell_command: !include shell.yaml
-sensor: !include sensors.yaml
+sensor: !include_dir_list sensors/

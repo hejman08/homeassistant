@@ -1,0 +1,4 @@
+platform: mqtt
+state_topic: "owntracks/hejman08/nathan_phone"
+name: "Nathan's Phone Longitude"
+value_template: "{{ value_json.lon }}"

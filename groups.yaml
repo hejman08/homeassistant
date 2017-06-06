@@ -30,6 +30,9 @@ Nathan_Phone:
   entities:
     - device_tracker.hejman08_nathan_phone
     - sensor.nathans_phone_battery
+    - sensor.nathans_phone_latitude
+    - sensor.nathans_phone_longitude
+ 
 Bedroom:
     - light.lexi_nightstand_
     - light.nathan_nightstand_
