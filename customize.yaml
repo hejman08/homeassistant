@@ -101,3 +101,6 @@
   scene.bedtime:
     emulated_hue: true
     icon: mdi:hotel
+  lock.front_door_locked_4_0:
+    emulated_hue: true
+    friendly_name: Front Door Lock

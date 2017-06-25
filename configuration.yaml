@@ -1,3 +1,4 @@
+
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
@@ -28,8 +29,25 @@ http:
 # Checks for available updates
 updater:
 
+#Notifiers
+notify:
+  - name: Pushbullet_nh
+    platform: pushbullet
+    api_key: !secret pushbullet_api_nh
+    
+  - name: Pushbullet_lh
+    platform: pushbullet
+    api_key: !secret pushbullet_api_lh
+    
+    
+
 # Discover some devices automatically
 #discovery:
+
+#Z-Wave installation 6/24/2017
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -43,7 +61,7 @@ logbook:
 #Hue
 light:
   platform: hue
-  host: 192.168.1.22
+  host: 10.0.0.25
   
   
 # Text to speech
@@ -52,7 +70,7 @@ tts:
 
 #MQTT for device tracker
 mqtt:
-  broker: 192.168.1.20
+  broker: 10.0.0.20
   port: 1883
   client_id: home-assistant-1
   username: !secret mqtt_user
@@ -64,7 +82,7 @@ device_tracker:
 emulated_hue:
   type: alexa
   listen_port: 80
-  host_ip: 192.168.1.20
+  host_ip: 10.0.0.20
   expose_by_default: false
   exposed_domains:
     - group
