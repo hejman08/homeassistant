@@ -99,14 +99,23 @@
     friendly_name: Set Phone to Vibrate
     icon: mdi:volume-off
     
+  script.set_blank_door_code:
+    friendly_name: Remove All User Codes
+    icon: mdi:delete-empty
 ###Emulated Hue releases here
  # group.bedroom:
  #   emulated_hue: true
   switch.bedroom_fan:
     emulated_hue: true
+  #switch.front_door_lock:
+    #emulated_hue: true
+    #icon: mdi:lock
+    #friendly_name: Front Door Lock
  # group.kitchen:
  #   emulated_hue: true
   group.dining_room:
+    emulated_hue: true
+  group.upstairs_hallway:
     emulated_hue: true
   group.living_room:
     emulated_hue: true 
@@ -120,4 +129,6 @@
     icon: mdi:hotel
   lock.front_door_locked_4_0:
     emulated_hue: true
+    icon: mdi:lock
     friendly_name: Front Door Lock
+    

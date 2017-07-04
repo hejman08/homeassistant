@@ -33,3 +33,73 @@ bedroom_fan_off:
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
+    
+#set_Rachael_code:
+#  sequence: 
+#    - service: lock.set_usercode
+#        data:
+#          node_id: 4
+#          code_slot: 25
+#          usercode: 58996
+set_empty_door_code:
+  alias: Set Empty Door Code
+  sequence:
+    - alias: set Empty Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "25"
+        usercode: "13468"
+set_rachael_door_code:
+  alias: Set Rachael Door Code
+  sequence:
+    - alias: set Rachael Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "25"
+        usercode: "58996"
+set_kat_door_code:
+  alias: Set Kat Door Code
+  sequence:
+    - alias: set Kat Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "25"
+        usercode: "19270"
+set_steph_door_code:
+  alias: Set Steph Door Code
+  sequence:
+    - alias: set Steph Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "25"
+        usercode: "42779"
+set_ruth_door_code:
+  alias: Set Ruth Door Code
+  sequence:
+    - alias: set Ruth Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "25"
+        usercode: "11968"
+
+
+#wakeup:
+ # alias: Wake Up
+ # sequence:
+ #   - alias: Bedroom lights on
+ #     service: light.turn_on
+ #     data:
+ #       entity_id: group.bedroom
+ #       brightness: 100      
+#set_blank_door_code:
+#  sequence:
+#    - service:
+#      data:
+#        node_id: "4"
+#        code_slot: "25"
+#        usercode: "13468"        

@@ -65,10 +65,18 @@ HA Certificate:
     - sensor.ssl_cert_expiry
 Front Door:
     - lock.front_door_locked_4_0
-    
+    #- switch.front_door_lock
 Scenes Control:
     - scene.bedtime
     - scene.morning
+
+Door Empty Code:
+    - script.set_empty_door_code
+Door User Codes:
+    - script.set_rachael_door_code
+    - script.set_kat_door_code
+    - script.set_steph_door_code
+    - script.set_ruth_door_code
 #Scenes:
 #  view: yes
 #  entities:
@@ -84,4 +92,5 @@ Security:
   entities:
     - group.front_door
     - group.HA_Certificate
-
+    - group.door_user_codes
+    - group.door_empty_code

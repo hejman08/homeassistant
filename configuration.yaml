@@ -23,6 +23,8 @@ http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret api_password
   server_port: 8123
+  ssl_certificate: /etc/letsencrypt/live/hejman.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/hejman.duckdns.org/privkey.pem
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
 
@@ -30,18 +32,19 @@ http:
 updater:
 
 #write the logs a bit more verbose.
-logger:
-  default: info
+#logger:
+#firehose:
+  #default: info
 
 #Notifiers
-notify:
-  - name: Pushbullet_nh
-    platform: pushbullet
-    api_key: !secret pushbullet_api_nh
-    
-  - name: Pushbullet_lh
-    platform: pushbullet
-    api_key: !secret pushbullet_api_lh
+#notify:
+#  - name: Pushbullet_nh
+#    platform: pushbullet
+#    api_key: !secret pushbullet_api_nh
+#    
+#  - name: Pushbullet_lh
+#    platform: pushbullet
+#    api_key: !secret pushbullet_api_lh
     
     
 
@@ -120,6 +123,11 @@ switch:
       code_on: 1072387
       code_off: 1072396
     Office Fan:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+    Front Door Lock:
       pulselength: 191
       protocol: 1
       code_on: 0
