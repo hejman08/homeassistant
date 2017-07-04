@@ -29,6 +29,10 @@ http:
 # Checks for available updates
 updater:
 
+#write the logs a bit more verbose.
+logger:
+  default: info
+
 #Notifiers
 notify:
   - name: Pushbullet_nh
@@ -69,15 +73,15 @@ tts:
   platform: google
 
 #MQTT for device tracker
-mqtt:
-  broker: 10.0.0.20
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret mqtt_user
-  password: !secret mqtt_password
+#mqtt:
+#  broker: 10.0.0.20
+#  port: 1883
+#  client_id: home-assistant-1
+#  username: !secret mqtt_user
+#  password: !secret mqtt_password
 
-device_tracker:
-  platform: owntracks
+#device_tracker:
+#  platform: owntracks
 
 emulated_hue:
   type: alexa
@@ -88,6 +92,7 @@ emulated_hue:
     - group
     - switch
     - scene
+    - lock
   
 ######Switches######
 switch:
@@ -128,6 +133,6 @@ switch:
 script: !include script.yaml
 automation: !include automations.yaml
 group: !include groups.yaml
-scene: !include scenes.yaml
+#scene: !include scenes.yaml
 shell_command: !include shell.yaml
-sensor: !include_dir_list sensors/
+#sensor: !include_dir_list sensors/

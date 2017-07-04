@@ -1,21 +1,22 @@
 default_view:
   view: yes
   entities:
-    - group.office
-    - group.bedroom
+    - group.Nathan_office
+    #- group.bedroom
     - group.switches
     - group.living_room
-    - group.kitchen
+    #- group.kitchen
     - group.dining_room
-    - group.phones
+    #- group.phones
+    - group.upstairs_hallway
   
 light_groups:
-    - group.office
-    - group.bedroom
+    - group.Nathan_office
+    #- group.bedroom
     - group.living_room
-    - group.kitchen
+    #- group.kitchen
     - group.dining_room
-    - group.living_area
+    #- group.living_area
 
 switches:
   name: Switches
@@ -26,69 +27,61 @@ switches:
     - switch.Office_Fan
     - switch.3D_Printer
 
-Nathan_Phone:
-  entities:
-    - device_tracker.hejman08_nathan_phone
-    - sensor.nathans_phone_battery
-    - sensor.nathans_phone_latitude
-    - sensor.nathans_phone_longitude
+#Nathan_Phone:
+#  entities:
+#    - device_tracker.hejman08_nathan_phone
+#    - sensor.nathans_phone_battery
+#    - sensor.nathans_phone_latitude
+#    - sensor.nathans_phone_longitude
  
-Bedroom:
-    - light.lexi_nightstand_
-    - light.nathan_nightstand_
+#Bedroom:
+#    - light.lexi_nightstand_
+#    - light.nathan_nightstand_
 
 Living Room:
     - light.LR1
+    - light.LR2
+    - light.LR3
 
-Office:
-    - light.OffL1
-    - light.Offl2
+Nathan Office:
+    - light.NH1
+    - light.NH2
+    
+Upstairs Hallway:
+    - light.HW1
+    - light.HW2
+    - light.HW3
+    - light.HW4
 
-Kitchen:
-    - light.Kit1
-    - light.Kit2
+#Kitchen:
+#    - light.Kit1
+#    - light.Kit2
 
 Dining Room:
-    - light.Dr1
-    - light.Dr2
+    - light.DR1
+    - light.DR2
 
-Master Switch:
-    - light.Kit1
-    - light.Kit2
-    - light.Dr1
-    - light.Dr2
-    - light.LR1
-    - light.OffL1
-    - light.Offl2
-    - light.lexi_nightstand_
-    - light.nathan_nightstand_
-    - switch.bedroom_fan
-    - switch.office_fan
-    - switch.3D_Printer
-    - switch.Amp
-Living Area:
-    - light.LR1
-    - light.Dr1
-    - light.Dr2
-
+HA Certificate:
+    - sensor.ssl_cert_expiry
 Front Door:
     - lock.front_door_locked_4_0
     
 Scenes Control:
     - scene.bedtime
     - scene.morning
-Scenes:
-  view: yes
-  entities:
-    - group.scenes_control
+#Scenes:
+#  view: yes
+#  entities:
+#    - group.scenes_control
     
-Phones:
-  view: yes
-  entities:
-    - group.nathan_phone
+#Phones:
+#  view: yes
+#  entities:
+#    - group.nathan_phone
 
 Security:
   view: yes
   entities:
     - group.front_door
+    - group.HA_Certificate
 

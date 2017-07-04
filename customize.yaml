@@ -1,6 +1,12 @@
 #####Customize Lights#####
   light.LR1:
-    friendly_name: Living Room RGB
+    friendly_name: Living Room Overhead 1
+  
+  light.LR2:
+    friendly_name: Living Room Overhead 2
+  
+  light.LR3:
+    friendly_name: Living Room Overhead 3
   
   light.DR1:
     friendly_name: Dining Room Overhead 1
@@ -8,17 +14,24 @@
   light.DR2:  
     friendly_name: Dining Room Overhead 2
   
-  light.OffL1:
-    friendly_name: Office Overhead 1
+  light.NH1:
+    friendly_name: Nathan's Office Overhead 1
   
-  light.OffL2:
-    friendly_name: Office Overhead 2
+  light.NH2:
+    friendly_name: Nathan's Office Overhead 2
   
-  light.Kit1:
-    friendly_name: Kitchen Overhead 1
+  light.HW1:
+    friendly_name: Upstairs Hallway 1
   
-  light.Kit2:
-    friendly_name: Kitchen Overhead 2
+  light.HW2:
+    friendly_name: Upstairs Hallway 2
+    
+  light.HW3:
+    friendly_name: Upstairs Hallway 3
+  
+  light.HW4:
+    friendly_name: Upstairs Hallway 4
+    
     
 
 
@@ -41,25 +54,28 @@
 #  group.lexi_phone:
 #    friendly_name: Lexi's Phone
 #    emulated_hue: false
-  group.nathan_phone:
-    friendly_name: Nathan's Phone
-    emulated_hue: false
+#  group.nathan_phone:
+#    friendly_name: Nathan's Phone
+#    emulated_hue: false
 
 #####Customize Devices#####
-  device_tracker.hejman08_nathan_phone:
-    friendly_name: Phone Locaton
-    icon: mdi:emoticon-poop
+ # device_tracker.hejman08_nathan_phone:
+ #   friendly_name: Phone Locaton
+ #   icon: mdi:emoticon-poop
 
-  sensor.nathans_phone_battery:
-    friendly_name: Battery
-    icon: mdi:battery
+ # sensor.nathans_phone_battery:
+ #   friendly_name: Battery
+ #   icon: mdi:battery
     
-  sensor.nathans_phone_latitude:
-    friendly_name: Latitude
-    icon: mdi:earth
+ # sensor.nathans_phone_latitude:
+ #   friendly_name: Latitude
+ #   icon: mdi:earth
     
-  sensor.nathans_phone_longitude:
-    friendly_name: Longitude
+ # sensor.nathans_phone_longitude:
+ #   friendly_name: Longitude
+ #   icon: mdi:earth
+  sensor.ssl_cert_expiry:
+    friendly_name: SSL Expiration Date
     icon: mdi:earth
 #####Customize Scripts#####
   script.nh_phone_ringer: 
@@ -84,17 +100,18 @@
     icon: mdi:volume-off
     
 ###Emulated Hue releases here
-  group.bedroom:
-    emulated_hue: true
+ # group.bedroom:
+ #   emulated_hue: true
   switch.bedroom_fan:
     emulated_hue: true
-  group.kitchen:
-    emulated_hue: true
+ # group.kitchen:
+ #   emulated_hue: true
   group.dining_room:
     emulated_hue: true
   group.living_room:
     emulated_hue: true 
-  group.office:
+  group.nathan_office:
+    friendly_name: Nathan's Office
     emulated_hue: true
   switch.office_fan:
     emulated_hue: true
