@@ -33,15 +33,8 @@ bedroom_fan_off:
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
-    
-#set_Rachael_code:
-#  sequence: 
-#    - service: lock.set_usercode
-#        data:
-#          node_id: 4
-#          code_slot: 25
-#          usercode: 58996
-set_empty_door_code:
+#Set codes to bullshit so the normal ones don't work    
+empty_rachael_code:
   alias: Set Empty Door Code
   sequence:
     - alias: set Empty Code
@@ -50,6 +43,34 @@ set_empty_door_code:
         node_id: "4"
         code_slot: "25"
         usercode: "13468"
+empty_kat_code:
+  alias: Set Empty Door Code
+  sequence:
+    - alias: set Empty Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "26"
+        usercode: "09462"
+empty_steph_code:
+  alias: Set Empty Door Code
+  sequence:
+    - alias: set Empty Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "27"
+        usercode: "85646"
+empty_ruth_code:
+  alias: Set Empty Door Code
+  sequence:
+    - alias: set Empty Code
+      service: lock.set_usercode
+      data:
+        node_id: "4"
+        code_slot: "28"
+        usercode: "69845"
+#enable user codes via script
 set_rachael_door_code:
   alias: Set Rachael Door Code
   sequence:
@@ -66,7 +87,7 @@ set_kat_door_code:
       service: lock.set_usercode
       data:
         node_id: "4"
-        code_slot: "25"
+        code_slot: "26"
         usercode: "19270"
 set_steph_door_code:
   alias: Set Steph Door Code
@@ -75,7 +96,7 @@ set_steph_door_code:
       service: lock.set_usercode
       data:
         node_id: "4"
-        code_slot: "25"
+        code_slot: "27"
         usercode: "42779"
 set_ruth_door_code:
   alias: Set Ruth Door Code
@@ -84,22 +105,6 @@ set_ruth_door_code:
       service: lock.set_usercode
       data:
         node_id: "4"
-        code_slot: "25"
+        code_slot: "28"
         usercode: "11968"
 
-
-#wakeup:
- # alias: Wake Up
- # sequence:
- #   - alias: Bedroom lights on
- #     service: light.turn_on
- #     data:
- #       entity_id: group.bedroom
- #       brightness: 100      
-#set_blank_door_code:
-#  sequence:
-#    - service:
-#      data:
-#        node_id: "4"
-#        code_slot: "25"
-#        usercode: "13468"        

@@ -70,3 +70,106 @@
     to: locked
 
     
+#Door code stuff
+- action:
+  - alias: Rachael door code enable
+    data:
+      entity_id: script.set_rachael_door_code
+    service: script.turn_on
+  alias: Rachael Code Enable
+  id: '14965475654366'
+  trigger:
+  - entity_id: switch.rachael_code_enabled
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: Rachael door code disable
+    data:
+      entity_id: script.empty_rachael_code
+    service: script.turn_on
+  alias: Rachael Code Disable
+  id: '14965475654393'
+  trigger:
+  - entity_id: switch.rachael_code_enabled
+    from: 'on'
+    platform: state
+    to: 'off'
+#kat
+- action:
+  - alias: kat door code enable
+    data:
+      entity_id: script.set_kat_door_code
+    service: script.turn_on
+  alias: kat Code Enable
+  id: '14965475654366'
+  trigger:
+  - entity_id: switch.kat_code_enabled
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: kat door code disable
+    data:
+      entity_id: script.empty_kat_code
+    service: script.turn_on
+  alias: kat Code Disable
+  id: '14965475654393'
+  trigger:
+  - entity_id: switch.kat_code_enabled
+    from: 'on'
+    platform: state
+    to: 'off'
+    
+#Steph
+- action:
+  - alias: steph door code enable
+    data:
+      entity_id: script.set_steph_door_code
+    service: script.turn_on
+  alias: steph Code Enable
+  id: '14965475654366'
+  trigger:
+  - entity_id: switch.steph_code_enabled
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: steph door code disable
+    data:
+      entity_id: script.empty_steph_code
+    service: script.turn_on
+  alias: steph Code Disable
+  id: '14965475654393'
+  trigger:
+  - entity_id: switch.steph_code_enabled
+    from: 'on'
+    platform: state
+    to: 'off'
+
+#ruth
+- action:
+  - alias: ruth door code enable
+    data:
+      entity_id: script.set_ruth_door_code
+    service: script.turn_on
+  alias: ruth Code Enable
+  id: '14965475654366'
+  trigger:
+  - entity_id: switch.ruth_code_enabled
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: ruth door code disable
+    data:
+      entity_id: script.empty_ruth_code
+    service: script.turn_on
+  alias: ruth Code Disable
+  id: '14965475654393'
+  trigger:
+  - entity_id: switch.ruth_code_enabled
+    from: 'on'
+    platform: state
+    to: 'off'
+    

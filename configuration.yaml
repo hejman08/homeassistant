@@ -37,14 +37,14 @@ updater:
   #default: info
 
 #Notifiers
-#notify:
-#  - name: Pushbullet_nh
-#    platform: pushbullet
-#    api_key: !secret pushbullet_api_nh
-#    
-#  - name: Pushbullet_lh
-#    platform: pushbullet
-#    api_key: !secret pushbullet_api_lh
+notify:
+  - name: Pushbullet_nh
+    platform: pushbullet
+    api_key: !secret pushbullet_api_nh
+    
+  - name: Pushbullet_lh
+    platform: pushbullet
+    api_key: !secret pushbullet_api_lh
     
     
 
@@ -127,7 +127,22 @@ switch:
       protocol: 1
       code_on: 0
       code_off: 0
-    Front Door Lock:
+    Rachael Code Enabled:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+    Kat Code Enabled:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+    Steph Code Enabled:
+      pulselength: 191
+      protocol: 1
+      code_on: 0
+      code_off: 0
+    Ruth Code Enabled:
       pulselength: 191
       protocol: 1
       code_on: 0

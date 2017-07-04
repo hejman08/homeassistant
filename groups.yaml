@@ -70,13 +70,14 @@ Scenes Control:
     - scene.bedtime
     - scene.morning
 
-Door Empty Code:
-    - script.set_empty_door_code
+#Door Empty Code:
+#    - script.set_empty_door_code
 Door User Codes:
-    - script.set_rachael_door_code
-    - script.set_kat_door_code
-    - script.set_steph_door_code
-    - script.set_ruth_door_code
+    #- script.set_rachael_door_code
+    - switch.rachael_code_enabled
+    - switch.kat_code_enabled
+    - switch.steph_code_enabled
+    - switch.ruth_code_enabled
 #Scenes:
 #  view: yes
 #  entities:
@@ -93,4 +94,4 @@ Security:
     - group.front_door
     - group.HA_Certificate
     - group.door_user_codes
-    - group.door_empty_code
+#    - group.door_empty_code
