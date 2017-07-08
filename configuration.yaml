@@ -32,9 +32,11 @@ http:
 updater:
 
 #write the logs a bit more verbose.
-#logger:
-#firehose:
-  #default: info
+logger:
+  default: critical
+  logs:
+    homeassistant.components.climate: debug
+    homeassistant.components.nest: debug
 
 #Notifiers
 notify:
@@ -46,7 +48,17 @@ notify:
     platform: pushbullet
     api_key: !secret pushbullet_api_lh
     
-    
+#Nest
+
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+#  sensors:
+#    monitored_conditions:
+#      - 'temperature'
+#      - 'target'
+climate:
+  platform: nest
 
 # Discover some devices automatically
 #discovery:

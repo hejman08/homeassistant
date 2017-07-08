@@ -32,10 +32,15 @@
   light.HW4:
     friendly_name: Upstairs Hallway 4
     
-    
-
-
-    
+#####Customize Climate#####
+  sensor.downstairs_thermostat_temperature:
+    friendly_name: Current Temp
+  sensor.downstairs_thermostat_humidity:
+    friendly_name: Current Humidity
+  sensor.downstairs_thermostat_target:
+    friendly_name: Target Temp
+  sensor.downstairs_thermostat_hvac_state:    
+    friendly_name: Current State
 #####Customize Switches#####
   switch.Amp:
     icon: mdi:amplifier
@@ -131,4 +136,5 @@
     emulated_hue: true
     icon: mdi:lock
     friendly_name: Front Door Lock
-    
+ 
+  

@@ -9,7 +9,6 @@ default_view:
     - group.dining_room
     #- group.phones
     - group.upstairs_hallway
-  
 light_groups:
     - group.Nathan_office
     #- group.bedroom
@@ -64,11 +63,18 @@ Dining Room:
 HA Certificate:
     - sensor.ssl_cert_expiry
 Front Door:
-    - lock.front_door_locked_4_0
+    - lock.front_door_locked
     #- switch.front_door_lock
 Scenes Control:
     - scene.bedtime
     - scene.morning
+    
+Nest:
+    - sensor.downstairs_thermostat_temperature
+    - sensor.downstairs_thermostat_humidity
+    - sensor.downstairs_thermostat_target
+    - sensor.downstairs_thermostat_hvac_state
+    
 
 #Door Empty Code:
 #    - script.set_empty_door_code
@@ -95,3 +101,7 @@ Security:
     - group.HA_Certificate
     - group.door_user_codes
 #    - group.door_empty_code
+Climate:
+  view: yes
+  entities:
+    - group.nest
