@@ -34,9 +34,9 @@ updater:
 #write the logs a bit more verbose.
 logger:
   default: critical
-  logs:
-    homeassistant.components.climate: debug
-    homeassistant.components.nest: debug
+ # logs:
+ #   homeassistant.components.climate: debug
+ #   homeassistant.components.nest: debug
 
 #Notifiers
 notify:
@@ -104,68 +104,15 @@ emulated_hue:
   host_ip: 10.0.0.20
   expose_by_default: false
   exposed_domains:
-    - group
+    #- group
     - switch
-    - scene
+    #- scene
     - lock
   
-######Switches######
-switch:
-  platform: rpi_rf
-  gpio: 17
-  switches:
-    Bedroom Fan:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-    Lexi Desktop:
-      pulselength: 191
-      protocol: 1
-      code_on: 1070531
-      code_off: 1070540
-    Amp:
-      pulselength: 191
-      protocol: 1
-      code_on: 1070851
-      code_off: 1070860
-    3D Printer:
-      pulselength: 191
-      protocol: 1
-      code_on: 1072387
-      code_off: 1072396
-    Office Fan:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-    Rachael Code Enabled:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-    Kat Code Enabled:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-    Steph Code Enabled:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-    Ruth Code Enabled:
-      pulselength: 191
-      protocol: 1
-      code_on: 0
-      code_off: 0
-#slowly but surely making all the switches be dummies so I can have a script send multiple code_on/code_off in quick succession as sending only one tends to work only sometimes.
-#so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.
-#Following the chain: Switch is clicked or triggered by Google Home > Automation triggers based on that > Automation fires script > Script fires shell command to 
-#send signal like 9 times in quick succession.  
 
 ###Includes###      
 script: !include script.yaml
+switch: !include switches.yaml
 automation: !include automations.yaml
 group: !include groups.yaml
 #scene: !include scenes.yaml

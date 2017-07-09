@@ -1,24 +1,18 @@
 default_view:
   view: yes
   entities:
-    - group.Nathan_office
+    #- group.Nathan_office
     #- group.bedroom
     - group.switches
-    - group.living_room
+    #- group.living_room
     #- group.kitchen
-    - group.dining_room
+    #- group.dining_room
     #- group.phones
-    - group.upstairs_hallway
-light_groups:
-    - group.Nathan_office
-    #- group.bedroom
-    - group.living_room
-    #- group.kitchen
-    - group.dining_room
-    #- group.living_area
+    #- group.upstairs_hallway
+    - group.light_switches
 
 switches:
-  name: Switches
+  name: Outlet Switches
   entities:
     - switch.Bedroom_Fan
     - switch.Lexi_Desktop
@@ -26,6 +20,13 @@ switches:
     - switch.Office_Fan
     - switch.3D_Printer
 
+light_switches:
+  name: Light Switches
+  entities:
+    - switch.living_room_light_switch
+    - switch.dining_room_light_switch
+    - switch.nathan_office_light_switch
+    - switch.upstairs_hallway_light_switch
 #Nathan_Phone:
 #  entities:
 #    - device_tracker.hejman08_nathan_phone

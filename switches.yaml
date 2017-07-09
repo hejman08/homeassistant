@@ -1,0 +1,76 @@
+platform: rpi_rf
+gpio: 17
+switches:
+  #RF Transmitter Switches
+  Bedroom Fan:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Lexi Desktop:
+    pulselength: 191
+    protocol: 1
+    code_on: 1070531
+    code_off: 1070540
+  Amp:
+    pulselength: 191
+    protocol: 1
+    code_on: 1070851
+    code_off: 1070860
+  3D Printer:
+    pulselength: 191
+    protocol: 1
+    code_on: 1072387
+    code_off: 1072396
+  Office Fan:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  #Dummy switches - Front Door Lock Code Automations
+  Rachael Code Enabled:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Kat Code Enabled:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Steph Code Enabled:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Ruth Code Enabled:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+    #Dummy Switches - Light group automations
+  Living Room Light Switch:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Dining Room Light Switch:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Nathan Office Light Switch:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+  Upstairs Hallway Light Switch:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
+
+#Slowly but surely making all the switches be dummies so I can have a script send multiple code_on/code_off in quick succession as sending only one tends to work only sometimes.
+#so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.
+#Following the chain: Switch is clicked or triggered by Google Home > Automation triggers based on that > Automation fires script > Script fires shell command to 
+#send signal like 9 times in quick succession.  

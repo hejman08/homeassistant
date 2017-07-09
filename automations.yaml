@@ -1,9 +1,9 @@
 - action:
-  - alias: Office_Fan_On
+  - alias: 'RF: Office_Fan_On'
     data:
       entity_id: script.office_fan_on
     service: script.turn_on
-  alias: Office Fan On
+  alias: 'RF: Office Fan On'
   id: '1496540509506'
   trigger:
   - entity_id: switch.office_fan
@@ -11,11 +11,11 @@
     platform: state
     to: 'on'
 - action:
-  - alias: office_fan_off
+  - alias: 'RF: office_fan_off'
     data:
       entity_id: script.office_fan_off
     service: script.turn_on
-  alias: Office Fan Off
+  alias: 'RF: Office Fan Off'
   id: '1496541544214'
   trigger:
   - entity_id: switch.office_fan
@@ -23,11 +23,11 @@
     platform: state
     to: 'off'
 - action:
-  - alias: bedroom_Fan_On
+  - alias: 'RF: bedroom_Fan_On'
     data:
       entity_id: script.bedroom_fan_on
     service: script.turn_on
-  alias: Bedroom Fan On
+  alias: 'RF: Bedroom Fan On'
   id: '1496547509506'
   trigger:
   - entity_id: switch.bedroom_fan
@@ -35,11 +35,11 @@
     platform: state
     to: 'on'
 - action:
-  - alias: bedroom_fan_off
+  - alias: 'RF: bedroom_fan_off'
     data:
       entity_id: script.bedroom_fan_off
     service: script.turn_on
-  alias: Bedroom Fan Off
+  alias: 'RF: Bedroom Fan Off'
   id: '1496549544214'
   trigger:
   - entity_id: switch.bedroom_fan
@@ -50,10 +50,10 @@
   - data:
       message: The front door was just unlocked.
     service: notify.pushbullet_lh
-  alias: Lexi_FrontDoorUnlocked_Pushbullet
+  alias: 'Notify: Lexi Front Door Unlocked - Pushbullet'
   id: '1498358968358'
   trigger:
-  - entity_id: lock.front_door_locked_4_0
+  - entity_id: lock.front_door_locked
     from: locked
     platform: state
     to: unlocked
@@ -61,22 +61,19 @@
   - data:
       message: The front door was just locked.
     service: notify.pushbullet_lh
-  alias: Lexi_FrontDoorLocked_Pushbullet
+  alias: 'Notify: Lexi Front Door Unlocked - Pushbullet'
   id: '1798358968358'
   trigger:
-  - entity_id: lock.front_door_locked_4_0
+  - entity_id: lock.front_door_locked
     from: unlocked
     platform: state
     to: locked
-
-    
-#Door code stuff
 - action:
-  - alias: Rachael door code enable
+  - alias: 'Lock: Rachael door code enable'
     data:
       entity_id: script.set_rachael_door_code
     service: script.turn_on
-  alias: Rachael Code Enable
+  alias: 'Lock: Rachael Code Enable'
   id: '14965475654366'
   trigger:
   - entity_id: switch.rachael_code_enabled
@@ -84,24 +81,23 @@
     platform: state
     to: 'on'
 - action:
-  - alias: Rachael door code disable
+  - alias: 'Lock: Rachael door code disable'
     data:
       entity_id: script.empty_rachael_code
     service: script.turn_on
-  alias: Rachael Code Disable
+  alias: 'Lock: Rachael Code Disable'
   id: '14965475654393'
   trigger:
   - entity_id: switch.rachael_code_enabled
     from: 'on'
     platform: state
     to: 'off'
-#kat
 - action:
-  - alias: kat door code enable
+  - alias: 'Lock: kat door code enable'
     data:
       entity_id: script.set_kat_door_code
     service: script.turn_on
-  alias: kat Code Enable
+  alias: 'Lock: Kat Code Enable'
   id: '14965475654366'
   trigger:
   - entity_id: switch.kat_code_enabled
@@ -109,25 +105,23 @@
     platform: state
     to: 'on'
 - action:
-  - alias: kat door code disable
+  - alias: 'Lock: Kat door code disable'
     data:
       entity_id: script.empty_kat_code
     service: script.turn_on
-  alias: kat Code Disable
+  alias: 'Lock: Kat Code Disable'
   id: '14965475654393'
   trigger:
   - entity_id: switch.kat_code_enabled
     from: 'on'
     platform: state
     to: 'off'
-    
-#Steph
 - action:
-  - alias: steph door code enable
+  - alias: 'Lock: Steph door code enable'
     data:
       entity_id: script.set_steph_door_code
     service: script.turn_on
-  alias: steph Code Enable
+  alias: 'Lock: Steph Code Enable'
   id: '14965475654366'
   trigger:
   - entity_id: switch.steph_code_enabled
@@ -135,25 +129,23 @@
     platform: state
     to: 'on'
 - action:
-  - alias: steph door code disable
+  - alias: 'Lock: Steph door code disable'
     data:
       entity_id: script.empty_steph_code
     service: script.turn_on
-  alias: steph Code Disable
+  alias: 'Lock: Steph Code Disable'
   id: '14965475654393'
   trigger:
   - entity_id: switch.steph_code_enabled
     from: 'on'
     platform: state
     to: 'off'
-
-#ruth
 - action:
-  - alias: ruth door code enable
+  - alias: 'Lock: Ruth door code enable'
     data:
       entity_id: script.set_ruth_door_code
     service: script.turn_on
-  alias: ruth Code Enable
+  alias: 'Lock: Ruth Code Enable'
   id: '14965475654366'
   trigger:
   - entity_id: switch.ruth_code_enabled
@@ -161,15 +153,116 @@
     platform: state
     to: 'on'
 - action:
-  - alias: ruth door code disable
+  - alias: 'Lock: Ruth door code disable'
     data:
       entity_id: script.empty_ruth_code
     service: script.turn_on
-  alias: ruth Code Disable
+  alias: 'Lock: Ruth Code Disable'
   id: '14965475654393'
   trigger:
   - entity_id: switch.ruth_code_enabled
     from: 'on'
     platform: state
     to: 'off'
+- action:
+  - alias: Turn ON living room lights
+    data:
+      entity_id: group.living_room
+    service: light.turn_on
+  alias: 'Switch: Living Room Lights Toggle On'
+  id: '1499623265185'
+  trigger:
+  - entity_id: switch.living_room_light_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: Turn OFF living room lights
+    data:
+      entity_id: group.living_room
+    service: light.turn_off
+  alias: 'Switch: Living Room Lights Toggle Off'
+  id: '1499623263185'
+  trigger:
+  - entity_id: switch.living_room_light_switch
+    from: 'on'
+    platform: state
+    to: 'off'
+- action:
+  - alias: Turn ON dining room lights
+    data:
+      entity_id: group.dining_room
+    service: light.turn_on
+  alias: 'Switch: Dining Room Lights Toggle On'
+  id: '1479623265185'
+  trigger:
+  - entity_id: switch.dining_room_light_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: Turn OFF Dining room lights
+    data:
+      entity_id: group.dining_room
+    service: light.turn_off
+  alias: 'Switch: Dining Room Lights Toggle Off'
+  id: '1499613263185'
+  trigger:
+  - entity_id: switch.dining_room_light_switch
+    from: 'on'
+    platform: state
+    to: 'off'    
     
+    
+    
+- action:
+  - alias: Turn ON nathan office lights
+    data:
+      entity_id: group.nathan_office
+    service: light.turn_on
+  alias: 'Switch: Nathan Office Lights Toggle On'
+  id: '1479623965185'
+  trigger:
+  - entity_id: switch.nathan_office_light_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: Turn OFF Nathan Office lights
+    data:
+      entity_id: group.nathan_office
+    service: light.turn_off
+  alias: 'Switch: Nathan Office Lights Toggle Off'
+  id: '1479613263185'
+  trigger:
+  - entity_id: switch.nathan_office_light_switch
+    from: 'on'
+    platform: state
+    to: 'off'  
+    
+    
+    
+- action:
+  - alias: Turn ON upstairs hallway lights
+    data:
+      entity_id: group.upstairs_hallway
+    service: light.turn_on
+  alias: 'Switch: upstairs hallway Lights Toggle On'
+  id: '1479633965185'
+  trigger:
+  - entity_id: switch.upstairs_hallway_light_switch
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - alias: Turn OFF upstairs hallway lights
+    data:
+      entity_id: group.upstairs_hallway
+    service: light.turn_off
+  alias: 'Switch: upstairs hallway Lights Toggle Off'
+  id: '1479633263185'
+  trigger:
+  - entity_id: switch.upstairs_hallway_light_switch
+    from: 'on'
+    platform: state
+    to: 'off'  

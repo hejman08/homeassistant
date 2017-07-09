@@ -50,11 +50,30 @@
     friendly_name: Desktop Outlet
   switch.Bedroom_Fan:
     icon: mdi:fan
+    emulated_hue: true
+ 
   switch.Office_Fan:
     icon: mdi:fan
+    emulated_hue: true
   switch.3D_Printer:
     icon: mdi:printer-3d
-    
+  #dummies
+  switch.dining_room_light_switch:
+    friendly_name: Dining Room
+    icon: mdi:lightbulb    
+    emulated_hue: true
+  switch.living_room_light_switch:
+    friendly_name: Living Room
+    icon: mdi:lightbulb
+    emulated_hue: true    
+  switch.nathan_office_light_switch:
+    friendly_name: Nathan's Office
+    icon: mdi:lightbulb
+    emulated_hue: true    
+  switch.upstairs_hallway_light_switch:
+    friendly_name: Upstairs Hallway
+    icon: mdi:lightbulb
+    emulated_hue: true
 #####Customize Groups#####
 #  group.lexi_phone:
 #    friendly_name: Lexi's Phone
@@ -107,34 +126,22 @@
   script.set_blank_door_code:
     friendly_name: Remove All User Codes
     icon: mdi:delete-empty
-###Emulated Hue releases here
+###Groups###
  # group.bedroom:
  #   emulated_hue: true
-  switch.bedroom_fan:
-    emulated_hue: true
-  #switch.front_door_lock:
+ # group.dining_room:
     #emulated_hue: true
-    #icon: mdi:lock
-    #friendly_name: Front Door Lock
- # group.kitchen:
- #   emulated_hue: true
-  group.dining_room:
-    emulated_hue: true
-  group.upstairs_hallway:
-    emulated_hue: true
-  group.living_room:
-    emulated_hue: true 
+ # group.upstairs_hallway:
+    #emulated_hue: true
+ # group.living_room:
+    #emulated_hue: true 
   group.nathan_office:
     friendly_name: Nathan's Office
-    emulated_hue: true
-  switch.office_fan:
-    emulated_hue: true
+    #emulated_hue: true
   scene.bedtime:
     emulated_hue: true
     icon: mdi:hotel
-  lock.front_door_locked_4_0:
+  lock.front_door_locked:
     emulated_hue: true
     icon: mdi:lock
     friendly_name: Front Door Lock
- 
-  

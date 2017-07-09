@@ -1,6 +1,3 @@
-2017-07-09 17:31:56 DEBUG (Thread-1) [homeassistant.components.nest] proceeding with setup
-2017-07-09 17:31:57 DEBUG (Thread-1) [homeassistant.components.nest] Structures to include: ['Home']
-2017-07-09 17:31:57 DEBUG (Thread-1) [homeassistant.components.nest] proceeding with discovery
-2017-07-09 17:31:57 DEBUG (Thread-1) [homeassistant.components.nest] setup done
-2017-07-09 17:31:57 INFO (MainThread) [homeassistant.components.climate] Setting up climate.nest
-2017-07-09 17:31:58 INFO (MainThread) [homeassistant.components.climate] Setting up climate.nest
+2017-07-09 18:41:06 ERROR (MainThread) [homeassistant.config] Invalid config for [homeassistant]: expected dict for dictionary value @ data['customize']['group.dining_room']. Got None
+expected dict for dictionary value @ data['customize']['group.living_room']. Got None
+expected dict for dictionary value @ data['customize']['group.upstairs_hallway']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 3). 
