@@ -171,3 +171,11 @@ group: !include groups.yaml
 #scene: !include scenes.yaml
 shell_command: !include shell.yaml
 #sensor: !include_dir_list sensors/
+
+####TEST####
+panel_custom: 
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml

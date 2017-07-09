@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="floorplan.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="183.05307"
+     inkscape:cy="739.8253"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       id="group.living_roo"
+       width="85.422623"
+       height="62.744045"
+       x="22.678572"
+       y="52.827377"
+       style="stroke-width:0.26458332;fill:#f9f9f9"
+       inkscape:label="group.living_room">
+      <title
+         id="title3696">group.living_room</title>
+    </rect>
+    <path
+       style="fill:#f9f9f9;stroke-width:0.26458332"
+       id="path3682"
+       ry="3.0238097"
+       rx="2.6458333"
+       cy="77.395828"
+       cx="51.782734" />
+    <circle
+       style="fill:#ffff00;stroke-width:0.25192404"
+       id="light.lr1"
+       inkscape:label="light.lr1"
+       cx="56.307964"
+       cy="109.09846"
+       r="2">
+      <title
+         id="title3690">light.lr1</title>
+    </circle>
+    <circle
+       style="fill:#ffff00;stroke-width:0.97490048"
+       id="group.living_room"
+       inkscape:label="Living Room"
+       cx="50.412838"
+       cy="98.119446"
+       r="7.5">
+      <title
+         id="title3694">Living Room</title>
+    </circle>
+    <circle
+       style="fill:#ffff00;stroke-width:0.24067938"
+       id="light.lr3"
+       inkscape:label="light.lr3"
+       cx="46"
+       cy="109.3"
+       r="2">
+      <title
+         id="title3692">light.lr3</title>
+    </circle>
+    <circle
+       style="fill:#ffff00;stroke-width:0.24067938"
+       id="light.lr2"
+       inkscape:label="light.lr2"
+       cx="51.294773"
+       cy="109.39777"
+       r="2">
+      <title
+         id="title3692-9">light.lr2</title>
+    </circle>
+  </g>
+</svg>
