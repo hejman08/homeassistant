@@ -1,3 +1,1 @@
-2017-07-09 18:41:06 ERROR (MainThread) [homeassistant.config] Invalid config for [homeassistant]: expected dict for dictionary value @ data['customize']['group.dining_room']. Got None
-expected dict for dictionary value @ data['customize']['group.living_room']. Got None
-expected dict for dictionary value @ data['customize']['group.upstairs_hallway']. Got None. (See /home/homeassistant/.homeassistant/configuration.yaml, line 3). 
+2017-08-01 01:17:50 WARNING (Thread-7) [homeassistant.components.emulated_hue] Alexa type is deprecated and will be removed in afuture version

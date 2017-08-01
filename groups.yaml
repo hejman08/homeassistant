@@ -23,10 +23,25 @@ switches:
 light_switches:
   name: Light Switches
   entities:
-    - switch.living_room_light_switch
-    - switch.dining_room_light_switch
-    - switch.nathan_office_light_switch
-    - switch.upstairs_hallway_light_switch
+    #- switch.living_room_light_switch
+    ##- switch.dining_room_light_switch
+    #- switch.nathan_office_light_switch
+    #- switch.upstairs_hallway_light_switch
+    - group.living_room
+    - group.dining_room
+    - group.upstairs_hallway
+    - group.nathan_office
+all_light_switches:
+  name: All Light Switches
+  entities:
+    #- switch.living_room_light_switch
+    #- switch.dining_room_light_switch
+    #- switch.nathan_office_light_switch
+    #- switch.upstairs_hallway_light_switch
+    - group.living_room
+    - group.dining_room
+    - group.upstairs_hallway
+    - group.nathan_office
 #Nathan_Phone:
 #  entities:
 #    - device_tracker.hejman08_nathan_phone
@@ -77,6 +92,9 @@ Nest:
     - sensor.downstairs_thermostat_hvac_state
     
 
+amcrest:
+    - sensor.front_door_camera_motion_detected
+#    - camera.front_door_camera
 #Door Empty Code:
 #    - script.set_empty_door_code
 Door User Codes:
@@ -101,6 +119,7 @@ Security:
     - group.front_door
     - group.HA_Certificate
     - group.door_user_codes
+    #- group.amcrest
 #    - group.door_empty_code
 Climate:
   view: yes

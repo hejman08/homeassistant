@@ -1,4 +1,0 @@
-libopenzwave
-python_openzwave
-pyozwman
-openzwave

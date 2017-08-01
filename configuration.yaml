@@ -33,7 +33,7 @@ updater:
 
 #write the logs a bit more verbose.
 logger:
-  default: critical
+  default: warning
  # logs:
  #   homeassistant.components.climate: debug
  #   homeassistant.components.nest: debug
@@ -99,16 +99,28 @@ tts:
 #  platform: owntracks
 
 emulated_hue:
-  type: alexa
   listen_port: 80
   host_ip: 10.0.0.20
   expose_by_default: false
+  type: alexa
   exposed_domains:
-    #- group
+      #- group
     - switch
     #- scene
     - lock
-  
+    
+#amcrest:
+#  - host: 10.0.0.45
+#    username: !secret amcrest_user
+#    password: !secret amcrest_pw
+    #resolution: low
+#    stream_source: mjpeg
+#    name: front door camera
+#    sensors:
+#      - motion_detector
+    
+#camera:
+#  - platform: amcrest  
 
 ###Includes###      
 script: !include script.yaml

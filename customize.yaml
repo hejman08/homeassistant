@@ -58,22 +58,30 @@
   switch.3D_Printer:
     icon: mdi:printer-3d
   #dummies
-  switch.dining_room_light_switch:
-    friendly_name: Dining Room
-    icon: mdi:lightbulb    
-    emulated_hue: true
-  switch.living_room_light_switch:
-    friendly_name: Living Room
-    icon: mdi:lightbulb
-    emulated_hue: true    
-  switch.nathan_office_light_switch:
-    friendly_name: Nathan's Office
-    icon: mdi:lightbulb
-    emulated_hue: true    
-  switch.upstairs_hallway_light_switch:
-    friendly_name: Upstairs Hallway
-    icon: mdi:lightbulb
-    emulated_hue: true
+#  switch.dining_room_light_switch:
+#    friendly_name: Dining Room
+#    icon: mdi:lightbulb    
+#    emulated_hue: true
+#  switch.living_room_light_switch:
+#    friendly_name: Living Room
+#    icon: mdi:lightbulb
+#    emulated_hue: true    
+#  switch.nathan_office_light_switch:
+#    friendly_name: Nathan's Office
+#    icon: mdi:lightbulb
+#    emulated_hue: true    
+#  switch.upstairs_hallway_light_switch:
+#    friendly_name: Upstairs Hallway
+#    icon: mdi:lightbulb
+#    emulated_hue: true
+#####Customize Cameras and their motion sensors#####
+  sensor.front_door_camera_motion_detected:
+    friendly_name: Front Door Motion Sensor
+    emulated_hue: false
+#  camera.front_door_camera:
+#    friendly_name: Front Door
+#    emulated_hue: false
+  
 #####Customize Groups#####
 #  group.lexi_phone:
 #    friendly_name: Lexi's Phone
@@ -127,21 +135,23 @@
     friendly_name: Remove All User Codes
     icon: mdi:delete-empty
 ###Groups###
- # group.bedroom:
- #   emulated_hue: true
- # group.dining_room:
-    #emulated_hue: true
- # group.upstairs_hallway:
-    #emulated_hue: true
- # group.living_room:
-    #emulated_hue: true 
+  #group.bedroom:
+  #  emulated_hue: true
+  group.dining_room:
+    emulated_hue: true
+  group.upstairs_hallway:
+    emulated_hue: true
+  group.living_room:
+    emulated_hue: true 
+  group.all_light_switches:
+    emulated_hue: true
   group.nathan_office:
     friendly_name: Nathan's Office
-    #emulated_hue: true
+    emulated_hue: true
   scene.bedtime:
     emulated_hue: true
     icon: mdi:hotel
   lock.front_door_locked:
-    emulated_hue: true
+    emulated_hue: false
     icon: mdi:lock
     friendly_name: Front Door Lock

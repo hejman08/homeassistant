@@ -69,6 +69,11 @@ switches:
     protocol: 1
     code_on: 0
     code_off: 0
+  Front Door Lock Switch:
+    pulselength: 191
+    protocol: 1
+    code_on: 0
+    code_off: 0
 
 #Slowly but surely making all the switches be dummies so I can have a script send multiple code_on/code_off in quick succession as sending only one tends to work only sometimes.
 #so far the bedroom fan and office fan are like this, the other switches are either unused or rarely used enough that I haven't bothered yet.
