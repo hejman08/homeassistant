@@ -33,6 +33,8 @@ bedroom_fan_off:
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
     - service: shell_command.bedroom_fan_off
+    
+    
 #Set codes to bullshit so the normal ones don't work    
 empty_rachael_code:
   alias: Set Empty Door Code

@@ -1,1 +1,3 @@
-2017-08-01 01:17:50 WARNING (Thread-7) [homeassistant.components.emulated_hue] Alexa type is deprecated and will be removed in afuture version
+2017-08-15 02:58:20 WARNING (Thread-7) [homeassistant.components.emulated_hue] Alexa type is deprecated and will be removed in afuture version
+2017-08-15 02:58:29 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2017-08-15 02:58:32 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.

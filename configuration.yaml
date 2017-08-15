@@ -14,7 +14,7 @@ homeassistant:
   customize: !include customize.yaml  
 
 # Enables the frontend
-frontend:
+frontend: !include frontend.yaml
 
 # Enables configuration UI
 config:
@@ -27,6 +27,7 @@ http:
   ssl_key: /etc/letsencrypt/live/hejman.duckdns.org/privkey.pem
   # Uncomment this if you are using SSL or running in Docker etc
   # base_url: example.duckdns.org:8123
+  base_url: https://hejman.duckdns.org
 
 # Checks for available updates
 updater:
@@ -47,7 +48,12 @@ notify:
   - name: Pushbullet_lh
     platform: pushbullet
     api_key: !secret pushbullet_api_lh
-    
+  
+  - name: slack
+    platform: slack
+    api_key: xoxb-62073489188-u7O4cFiCEDV73q5mQSCTWCom
+    default_channel: '#ha-alerts'    
+
 #Nest
 
 nest:
@@ -83,9 +89,6 @@ light:
   host: 10.0.0.25
   
   
-# Text to speech
-tts:
-  platform: google
 
 #MQTT for device tracker
 #mqtt:
@@ -108,7 +111,18 @@ emulated_hue:
     - switch
     #- scene
     - lock
-    
+
+tts:
+  - platform: amazon_polly
+    aws_access_key_id: !secret AWS_ACCESS_KEY_ID
+    aws_secret_access_key: !secret AWS_SECRET_ACCESS_KEY
+    region_name: 'us-east-1'
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 57600
+media_player:
+  - platform: cast    
 #amcrest:
 #  - host: 10.0.0.45
 #    username: !secret amcrest_user

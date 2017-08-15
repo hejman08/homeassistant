@@ -50,7 +50,10 @@
   - data:
       message: The front door was just unlocked.
     service: notify.pushbullet_lh
-  alias: 'Notify: Lexi Front Door Unlocked - Pushbullet'
+  - data:
+      message: The front door was just unlocked.
+    service: notify.slack
+  alias: 'Notify: Front Door Unlocked'
   id: '1498358968358'
   trigger:
   - entity_id: lock.front_door_locked
@@ -61,7 +64,10 @@
   - data:
       message: The front door was just locked.
     service: notify.pushbullet_lh
-  alias: 'Notify: Lexi Front Door Unlocked - Pushbullet'
+  - data:
+      message: The front door was just locked.
+    service: notify.slack
+  alias: 'Notify: Front Door Locked'
   id: '1798358968358'
   trigger:
   - entity_id: lock.front_door_locked
@@ -164,105 +170,3 @@
     from: 'on'
     platform: state
     to: 'off'
-#- action:
-#  - alias: Turn ON living room lights
-#    data:
-#      entity_id: group.living_room
-#    service: light.turn_on
-#  alias: 'Switch: Living Room Lights Toggle On'
-#  id: '1499623265185'
-#  trigger:
-#  - entity_id: switch.living_room_light_switch
-#    from: 'off'
-#    platform: state
-#    to: 'on'
-#- action:
-#  - alias: Turn OFF living room lights
-#    data:
-#      entity_id: group.living_room
-#    service: light.turn_off
-#  alias: 'Switch: Living Room Lights Toggle Off'
-##  id: '1499623263185'
- # trigger:
-#  - entity_id: switch.living_room_light_switch
-#    from: 'on'
-#    platform: state
-#    to: 'off'
-#- action:
-#  - alias: Turn ON dining room lights
-#    data:
-#      entity_id: group.dining_room
-#    service: light.turn_on
-#  alias: 'Switch: Dining Room Lights Toggle On'
-#  id: '1479623265185'
-#  trigger:
-#  - entity_id: switch.dining_room_light_switch
-#    from: 'off'
-#    platform: state
-#    to: 'on'
-#- action:
-#  - alias: Turn OFF Dining room lights
-#    data:
-#      entity_id: group.dining_room
-#    service: light.turn_off
-#  alias: 'Switch: Dining Room Lights Toggle Off'
-#  id: '1499613263185'
-#  trigger:
-#  - entity_id: switch.dining_room_light_switch
-#    from: 'on'
-#    platform: state
-#    to: 'off'    
-    
-    
-    
-#- action:
-##  - alias: Turn ON nathan office lights
-#    data:
-#      entity_id: group.nathan_office
-#    service: light.turn_on
-#  alias: 'Switch: Nathan Office Lights Toggle On'
-#  id: '1479623965185'
-#  trigger:
-#  - entity_id: switch.nathan_office_light_switch
-#    from: 'off'
-#    platform: state
-#    to: 'on'
-#- action:
-#  - alias: Turn OFF Nathan Office lights
-#    data:
-#      entity_id: group.nathan_office
-#    service: light.turn_off
-#  alias: 'Switch: Nathan Office Lights Toggle Off'
-#  id: '1479613263185'
-#  trigger:
-#  - entity_id: switch.nathan_office_light_switch
-#    from: 'on'
-#    platform: state
-#    to: 'off'  
-    
-    
-    
-#- action:
-#  - alias: Turn ON upstairs hallway lights
-#    data:
-#      entity_id: group.upstairs_hallway
-#    service: light.turn_on
-#  alias: 'Switch: upstairs hallway Lights Toggle On'
-#  id: '1479633965185'
-#  trigger:
-#  - entity_id: switch.upstairs_hallway_light_switch
-#    from: 'off'
-#    platform: state
-#    to: 'on'
-#- action:
-#  - alias: Turn OFF upstairs hallway lights
-#    data:
-#      entity_id: group.upstairs_hallway
-#    service: light.turn_off
-#  alias: 'Switch: upstairs hallway Lights Toggle Off'
-#  id: '1479633263185'
-#  trigger:
-#  - entity_id: switch.upstairs_hallway_light_switch
-#    from: 'on'
-#    platform: state
-#    to: 'off'  
