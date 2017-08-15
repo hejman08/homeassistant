@@ -1,3 +1,22 @@
-2017-08-15 02:58:20 WARNING (Thread-7) [homeassistant.components.emulated_hue] Alexa type is deprecated and will be removed in afuture version
-2017-08-15 02:58:29 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
-2017-08-15 02:58:32 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
+2017-08-15 11:01:13 WARNING (Thread-4) [homeassistant.components.emulated_hue] Alexa type is deprecated and will be removed in afuture version
+2017-08-15 11:01:18 ERROR (MainThread) [homeassistant.components.tts] Error setting up platform amazon_polly
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.4/site-packages/homeassistant/components/tts/__init__.py", line 117, in async_setup_platform
+    platform.get_engine, hass, p_config)
+  File "/usr/lib/python3.4/asyncio/futures.py", line 388, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 286, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 277, in result
+    raise self._exception
+  File "/usr/lib/python3.4/concurrent/futures/thread.py", line 54, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.4/site-packages/homeassistant/components/tts/amazon_polly.py", line 119, in get_engine
+    all_voices_req = polly_client.describe_voices()
+  File "/srv/homeassistant/lib/python3.4/site-packages/botocore/client.py", line 251, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/srv/homeassistant/lib/python3.4/site-packages/botocore/client.py", line 537, in _make_api_call
+    raise ClientError(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (UnrecognizedClientException) when calling the DescribeVoices operation: The security token included in the request is invalid.
+2017-08-15 11:01:22 WARNING (MainThread) [homeassistant.setup] Setup of media_player is taking over 10 seconds.
+2017-08-15 11:01:25 WARNING (MainThread) [homeassistant.components.media_player] Setup of platform cast is taking over 10 seconds.
