@@ -48,10 +48,10 @@
     to: 'off'
 - action:
   - data:
-      message: The front door was just unlocked.
+      message: Front door {{ states.sensor.front_door_last_state.state }}.
     service: notify.pushbullet_lh
   - data:
-      message: The front door was just unlocked.
+      message: Front door {{ states.sensor.front_door_last_state.state }}.
     service: notify.slack
   alias: 'Notify: Front Door Unlocked'
   id: '1498358968358'
@@ -62,10 +62,10 @@
     to: unlocked
 - action:
   - data:
-      message: The front door was just locked.
+      message: Front door {{ states.sensor.front_door_last_state.state }}.
     service: notify.pushbullet_lh
   - data:
-      message: The front door was just locked.
+      message: Front door {{ states.sensor.front_door_last_state.state }}.
     service: notify.slack
   alias: 'Notify: Front Door Locked'
   id: '1798358968358'

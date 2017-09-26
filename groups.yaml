@@ -120,7 +120,7 @@ Security:
   entities:
     - group.front_door
     - group.HA_Certificate
-    - group.door_user_codes
+    #- group.door_user_codes
     #- group.amcrest
 #    - group.door_empty_code
 Climate:
