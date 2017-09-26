@@ -111,15 +111,7 @@ emulated_hue:
     #- scene
     - lock
 
-tts:
-  - platform: amazon_polly
-    aws_access_key_id: !secret AWS_ACCESS_KEY_ID
-    aws_secret_access_key: !secret AWS_SECRET_ACCESS_KEY
-    region_name: 'us-east-1'
-  - platform: google
-    cache: true
-    cache_dir: /tmp/tts
-    time_memory: 57600
+
 media_player:
   - platform: cast    
 #amcrest:
@@ -143,7 +135,7 @@ group: !include groups.yaml
 #scene: !include scenes.yaml
 shell_command: !include shell.yaml
 #sensor: !include_dir_list sensors/
-
+sensor: !include sensors.yaml
 ####TEST####
 panel_custom: 
   - name: floorplan

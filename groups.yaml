@@ -3,13 +3,14 @@ default_view:
   entities:
     #- group.Nathan_office
     #- group.bedroom
+    - group.light_switches
     - group.switches
     #- group.living_room
     #- group.kitchen
     #- group.dining_room
     #- group.phones
     #- group.upstairs_hallway
-    - group.light_switches
+    
 
 switches:
   name: Outlet Switches
@@ -80,6 +81,7 @@ HA Certificate:
     - sensor.ssl_cert_expiry
 Front Door:
     - lock.front_door_locked
+    - sensor.front_door_last_state
     #- switch.front_door_lock
 Scenes Control:
     - scene.bedtime
