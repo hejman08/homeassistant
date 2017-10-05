@@ -34,7 +34,7 @@ updater:
 
 #write the logs a bit more verbose.
 logger:
-  default: info
+  default: warning
  # logs:
  #   homeassistant.components.climate: debug
  #   homeassistant.components.nest: debug

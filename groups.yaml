@@ -15,12 +15,8 @@ default_view:
 switches:
   name: Outlet Switches
   entities:
-    - switch.Bedroom_Fan
-    - switch.Lexi_Desktop
-    - switch.Amp
     - switch.Office_Fan
-    - switch.3D_Printer
-
+    - switch.Bedroom_Fan
 light_switches:
   name: Light Switches
   entities:

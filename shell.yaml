@@ -1,7 +1,7 @@
-office_fan_on: /var/www/rfoutlet/codesend 1078531
-bedroom_fan_on: /var/www/rfoutlet/codesend 1070387
-office_fan_off: /var/www/rfoutlet/codesend 1078540
-bedroom_fan_off: /var/www/rfoutlet/codesend 1070396
+office_fan_on: /var/www/rfoutlet/codesend 1070531
+bedroom_fan_on: /var/www/rfoutlet/codesend 1072387
+office_fan_off: /var/www/rfoutlet/codesend 1070540
+bedroom_fan_off: /var/www/rfoutlet/codesend 1072396
 
 #office fan is currently switch 5.
 #bedroom fan is switch 1.

@@ -2,74 +2,24 @@ platform: rpi_rf
 gpio: 17
 switches:
   #RF Transmitter Switches
-  Bedroom Fan:
+  #5 switches:
+  #1: Unknown
+  #2: 1072387 on, 1072396 off
+  #3: Unknown
+  #4: 1070531on, 1070450 off
+  #5: Unknown
+  
+  #Possible Unknown Code Pairs: 
+  #-1070851, 1070860
+  #-1078531, 1078540
+  #-1070387, 1070396
+  
+  Bedroom Fan: #Switch 4
     pulselength: 191
     protocol: 1
     code_on: 0
     code_off: 0
-  Lexi Desktop:
-    pulselength: 191
-    protocol: 1
-    code_on: 1070531
-    code_off: 1070540
-  Amp:
-    pulselength: 191
-    protocol: 1
-    code_on: 1070851
-    code_off: 1070860
-  3D Printer:
-    pulselength: 191
-    protocol: 1
-    code_on: 1072387
-    code_off: 1072396
-  Office Fan:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  #Dummy switches - Front Door Lock Code Automations
-  Rachael Code Enabled:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Kat Code Enabled:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Steph Code Enabled:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Ruth Code Enabled:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-    #Dummy Switches - Light group automations
-  Living Room Light Switch:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Dining Room Light Switch:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Nathan Office Light Switch:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Upstairs Hallway Light Switch:
-    pulselength: 191
-    protocol: 1
-    code_on: 0
-    code_off: 0
-  Front Door Lock Switch:
+  Office Fan: #Switch 2
     pulselength: 191
     protocol: 1
     code_on: 0
